@@ -190,3 +190,30 @@ case Enum.at(list, 2) do
   _ -> "catch hands"
 end
 ```
+
+```elixir
+defmodule Post do
+  defstruct(
+    id: nil,
+    title: "",
+    description: "",
+    author: ""
+  )
+end
+```
+
+```elixir
+post1 = %Post{id: 1, title: "Title No 1", author: "Julius Caeser"}
+```
+
+```elixir
+case post1 do
+  %{author: "Octallium"} -> "Got a post from Octallium"
+  %{author: "Anil Kulkarni"} -> "Got a post from Anil Kulkarni"
+  %{author: author} -> "Got a post from #{author}"
+end
+```
+
+```elixir
+post1 = %{post1 | author: "Anil Kulkarni"}
+```
