@@ -176,3 +176,17 @@ user1 = %{user1 | age: 21}
 ```
 
 ## Flow Control
+
+## case
+
+```elixir
+list = [1, 2, 3]
+```
+
+```elixir
+case Enum.at(list, 2) do
+  1 -> "This will not print"
+  3 -> "Found your match"
+  _ -> "catch hands"
+end
+```
