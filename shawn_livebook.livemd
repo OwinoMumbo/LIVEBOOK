@@ -170,3 +170,9 @@ user1 = %User{username: "Shawn", age: 26, email: "MUmbo@shawn.owino"}
 %{username: username} = user1
 username
 ```
+
+```elixir
+user1 = %{user1 | age: 21}
+```
+
+## Flow Control
