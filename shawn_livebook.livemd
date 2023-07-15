@@ -149,3 +149,9 @@ my_map = %{my_map | c: 7}
 ```
 
 ## Struct
+
+The keyword list used with defstruct defines what fields the struct will have along with their default values.
+
+Structs take the name of the module they’re defined in. In the example above, we defined a struct named User.
+
+We can now create User structs by using a syntax similar to the one used to create maps:
