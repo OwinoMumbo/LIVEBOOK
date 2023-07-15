@@ -208,12 +208,29 @@ post1 = %Post{id: 1, title: "Title No 1", author: "Julius Caeser"}
 
 ```elixir
 case post1 do
-  %{author: "Octallium"} -> "Got a post from Octallium"
-  %{author: "Anil Kulkarni"} -> "Got a post from Anil Kulkarni"
+  %{author: "Shawn"} -> "Got a post from Shawn"
+  %{author: "Anil Mumbo"} -> "Got a post from Anil Mumbo"
   %{author: author} -> "Got a post from #{author}"
 end
 ```
 
 ```elixir
-post1 = %{post1 | author: "Anil Kulkarni"}
+post1 = %{post1 | author: "Anil Mumbo"}
+```
+
+## Cond
+
+```elixir
+cond do
+  post1.author == "Shawn" -> "Editing a post from Shawn"
+  post1.author == "Anil Mumbo" -> "Editing a post from Anil Mumbo"
+  true -> "This is a catch all"
+end
+```
+
+```elixir
+cond do
+  hd(list) == 1 -> "Got a 1"
+  true -> "Head is #{hd(list)}"
+end
 ```
