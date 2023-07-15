@@ -234,3 +234,13 @@ cond do
   true -> "Head is #{hd(list)}"
 end
 ```
+
+## If/Else
+
+```elixir
+if true do
+  "This will work"
+else
+  "Else this will work"
+end
+```
